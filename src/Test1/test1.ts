@@ -1,3 +1,4 @@
+//
 let employeeName: string = "Name: Mani";
 let employId: any = "ID: 1234";
 let department: string = "Department: QA Team";
