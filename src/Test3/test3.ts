@@ -286,7 +286,7 @@ console.log("Interview Passed");
 
 
 //--------------------------------------------------
-// Question 5 Not Completed
+// Question 5 Not Completed.
 
 //--------------------------------------------------
 // Question 5 - High Level Debugging Challenge
