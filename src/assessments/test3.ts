@@ -285,112 +285,111 @@ console.log("Interview Passed");
 
 
 
-//--------------------------------------------------
-// Question 5 Not Completed.
+--------------------------------------------------
+Question 5 Not Completed.
 
-//--------------------------------------------------
-// Question 5 - High Level Debugging Challenge
+--------------------------------------------------
+Question 5 - High Level Debugging Challenge
 
-//--------------------------------------------------
-// Question 5 - Fill the Missing Code
+--------------------------------------------------
+Question 5 - Fill the Missing Code
 
-// const employeeName: string = "Alex";
-// const monthlyTarget: number = 60000;
+const employeeName: string = "Alex";
+const monthlyTarget: number = 60000;
 
-// const monthlySales: number[] = [
-//     12000,
-//     9000,
-//     18000,
-//     7000,
-//     15000,
-//     11000
-// ];
+const monthlySales: number[] = [
+    12000,
+    9000,
+    18000,
+    7000,
+    15000,
+    11000
+];
 
-// let totalSales: number = 0;
-// let incentive: number = 0;
-// let penalty: number = 0;
-// let highSalesDays: number = 0;
-// let bestSales: number = 18000;
-// let commission: number = 0;
+let totalSales: number = 0;
+let incentive: number = 0;
+let penalty: number = 0;
+let highSalesDays: number = 0;
+let bestSales: number = 0;
+let commission: number = 0;
 
-// console.log("Employee Name :", employeeName);
-// console.log("--------------------------------");
+console.log("Employee Name :", employeeName);
+console.log("--------------------------------");
 
-// for (let day = ______________________; day ______________________; day++) {
+for (let day = 0; day < monthlySales.length; day++) {
 
-//     console.log("Day :", day + 1);
-//     console.log("Sales :", ______________________);
+    console.log("Day :", day + 1);
+    console.log("Sales :", monthlySales[day]);
 
-//     ________________________________;
+    totalSales = totalSales + monthlySales[day]!;
 
-//     if (______________________________) {
-//         bestSales = monthlySales[day];
-//     }
+    if (monthlySales[day]! > bestSales) {
+        bestSales = monthlySales[day]!;
+    }
 
-//     if (______________________________) {
+    if (monthlySales[day]! >= 15000) {
 
-//         console.log("Excellent Sales");
+        console.log("Excellent Sales");
 
-//         ________________________________;
-//         ________________________________;
+        incentive = incentive + 2000;
+        highSalesDays ++;
 
-//     } else if (______________________________) {
+    } else if (monthlySales[day]! >= 10000) {
 
-//         console.log("Good Sales");
+        console.log("Good Sales");
 
-//         ________________________________;
-//         ________________________________;
+        incentive = incentive + 1000;
+        highSalesDays ++;
 
-//     } else {
+    } else {
 
-//         console.log("Poor Sales");
+        console.log("Poor Sales");
 
-//         ________________________________;
+        penalty = penalty + 500;
 
-//     }
+    }
 
-//     console.log("--------------------------------");
-// }
+    console.log("--------------------------------");
+}
 
-// commission = ________________________________;
+commission = totalSales * 0.05;
 
-// const averageSales =
-//     ________________________________;
+const averageSales =
+    totalSales / monthlySales.length;
 
-// const finalSalary =
-//     ________________________________;
+const finalSalary =
+    30000 + incentive + commission - penalty;
 
-// console.log("Total Sales :", totalSales);
-// console.log("Average Sales :", averageSales);
-// console.log("Highest Sales :", bestSales);
-// console.log("High Sales Days :", highSalesDays);
-// console.log("Incentive :", incentive);
-// console.log("Penalty :", penalty);
-// console.log("Commission :", commission);
+console.log("Total Sales :", totalSales);
+console.log("Average Sales :", averageSales);
+console.log("Highest Sales :", bestSales);
+console.log("High Sales Days :", highSalesDays);
+console.log("Incentive :", incentive);
+console.log("Penalty :", penalty);
+console.log("Commission :", commission);
 
-// if (
-//     ________________________________ &&
-//     ________________________________ &&
-//     ________________________________
-// ) {
+if (
+    totalSales >= monthlyTarget &&
+    highSalesDays >=5 &&
+    bestSales >= 18000
+) {
 
-//     console.log("Employee Rating : Outstanding");
+    console.log("Employee Rating : Outstanding");
 
-// } else if (
-//     ________________________________
-// ) {
+} else if (
+    totalSales >= monthlyTarget
+) {
+    console.log("Employee Rating : Excellent");
 
-//     console.log("Employee Rating : Excellent");
+} else {
 
-// } else {
+    console.log("Employee Rating : Needs Improvement");
 
-//     console.log("Employee Rating : Needs Improvement");
+}
 
-// }
+console.log("Final Salary :", finalSalary);
 
-// console.log("Final Salary :", finalSalary);
-
-// console.log("Assessment Completed");
+console.log("Assessment Completed");
 
 
 //Output 
